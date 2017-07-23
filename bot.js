@@ -12,7 +12,7 @@ bot.on("ready", () => {
 bot.on("message", (msg) => {
 
 	//Exit and stop if no prefix is found or if another bot says it
-	if (!msg.content.startsWith(config.prefix) || message.author.bot) return;
+	if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
 
 	if (msg.content.startsWith(config.prefix + "<3")) {
 		msg.channel.send(":heart::heart::heart:");
