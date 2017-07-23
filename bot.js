@@ -5,8 +5,9 @@ const fs = require("fs");
 
 bot.login(config.token);
 
-bot.on("ready", () => {
-	console.log("I am ready!");
+bot.on('ready', () => {
+	bot.user.setGame('beta v0.0000001');
+	console.log('I am ready!');
 });
 
 bot.on("message", (msg) => {
@@ -18,9 +19,11 @@ bot.on("message", (msg) => {
 		msg.channel.send(":heart::heart::heart:");
 	} else if (msg.content.startsWith(config.prefix + "help")) {
 		msg.channel.send("uhhhhhhhhh...");
+	} else if (msg.content.startsWith(config.prefix + "ping")) {
+		msg.channel.send('Pong! Ping = \'${Math.round(bot.ping)}\' ms')
 	}
 
-	if (msg.author.id !== config.ownerID) return;
+	if (msg.author.id !== config.ownerID) return msg.reply('lol nope');
 
 	if (msg.content.startsWith(config.prefix + "bee")) {
 		msg.channel.send("According to all known laws of aviation, there is no known way a bee should be able to fly. Its wings are to small to get its fat little body off the ground. The bee, of course, flies anyways because bees don't care what humans think is impossible.")
