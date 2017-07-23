@@ -8,7 +8,7 @@ bot.login(config.token);
 //Logs to the console when the bot turns on and has set a game
 bot.on('ready', () => {
 	bot.user.setGame('beta v0.0000001');
-	console.log(`Ready! Currently located in ${client.guilds.size} servers!`);
+	console.log(`Ready! Currently located in ${bot.guilds.size} servers!`);
 });
 
 //Logs to the console when the bot joins a server
