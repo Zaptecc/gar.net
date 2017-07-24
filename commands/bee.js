@@ -14,6 +14,6 @@ exports.conf = {
 
 exports.help = {
     name: 'bee',
-    description: 'Simple test to see if I am responding!',
+    description: 'Reads off the entire Bee Movie script, mainly used to test latency.',
     usage: 'bee'
 };

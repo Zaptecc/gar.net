@@ -11,6 +11,6 @@ exports.conf = {
 
 exports.help = {
     name: 'ping',
-    description: 'Simple test to see if I am responding!',
+    description: 'Determine bot latency',
     usage: 'ping'
 };
