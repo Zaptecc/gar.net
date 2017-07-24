@@ -7,7 +7,7 @@ bot.login(config.token);
 
 //Logs to the console when the bot turns on and has set a game
 bot.on('ready', () => {
-	bot.user.setGame('beta v0.0000001');
+	bot.user.setGame('beta v0.0000001', 'https://twitch.tv/lightningdude38', 1);
 	console.log(`Ready! Currently located in ${bot.guilds.size} servers!`);
 });
 
@@ -24,22 +24,35 @@ bot.on('guildDelete', guild => {
 //Commands
 bot.on('message', (msg) => {
 
-	//Exit and stop if no prefix is found or if another bot says it
-	if (!msg.content.indexOf(config.prefix) || msg.author.bot) return;
+	//NON-COMMANDS
 
-	if (msg.content.indexOf(config.prefix + '<3')) {
-		msg.channel.send(':heart::heart::heart:');
-	} else if (msg.content.indexOf(config.prefix + 'help')) {
+	if (msg.content.includes('❤')) {
+		msg.channel.send(':heart::heart::heart:')
+	} else if (msg.content.includes('shit')) {
+		msg.react('💩')
+	} else if (msg.content.includes('ayy')) {
+		msg.react('🇱')
+		setTimeout(function(){msg.react('🇲')}, 500)
+		setTimeout(function(){msg.react('🅰')}, 1000)
+		setTimeout(function(){msg.react('🇴')}, 1500)
+	}
+
+	//Exit and stop if no prefix is found or if another bot says it
+	if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
+
+	if (msg.content.includes('version')) {
+		msg.channel.send('the bot is still in what i like to describe as "mega-beta"');
+	} else if (msg.content.startsWith(config.prefix + 'help')) {
 		msg.channel.send('uhhhhhhhhh...');
-	} else if (msg.content.indexOf(config.prefix + 'ping')) {
+	} else if (msg.content.startsWith(config.prefix + 'ping')) {
 		msg.channel.send(`Pong! Ping = \`${Math.round(bot.ping)}\` ms`)
 	}
 
 	//Bot author only commands
-	if (msg.author.id !== config.ownerID) return msg.reply('lol nope');
+	if (msg.author.id !== config.ownerID) return;
 
-	if (msg.content.indexOf(config.prefix + "bee")) {
-		msg.channel.send("According to all known laws of aviation, there is no known way a bee should be able to fly. Its wings are to small to get its fat little body off the ground. The bee, of course, flies anyways because bees don't care what humans think is impossible.")
+	if (msg.content.startsWith(config.prefix + "bee")) {
+		msg.channel.send("According to all known laws of aviation, there is no known way a bee should be able to fly. Its wings are to small too get its fat little body off the ground. The bee, of course, flies anyways because bees don't care what humans think is impossible.")
 		msg.channel.send("Yellow, black. Yellow, black. Yellow, black. Yellow, black. Ooh, black and yellow! Let's shake it up a little.")
 		msg.channel.send("Barry! Breakfast is ready!")
 		msg.channel.send("Coming! Hang on a second. Hello?")
