@@ -46,7 +46,7 @@ bot.on('message', (msg) => {
 		msg.channel.send('uhhhhhhhhh...');
 	} else if (msg.content.startsWith(config.prefix + 'ping')) {
 		msg.channel.send(`Pong! Ping = \`${Math.round(bot.ping)}\` ms`)
-	} else if (msg.content.startsWith(config.prefix + 'helptest')) {
+	} else if (msg.content.startsWith(config.prefix + 'testhelp')) {
 		msg.channel.send({embed: {
     	color: 3447003,
     	author: {
