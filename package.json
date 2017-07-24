@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/lightningdude38/gar.net#readme",
   "dependencies": {
-    "discord.js": "^11.1.0"
+    "discord.js": "^11.1.0",
+    "supervisor": "^0.12.0"
   }
 }
