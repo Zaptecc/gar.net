@@ -7,7 +7,7 @@ bot.login(config.token);
 
 //Logs to the console when the bot turns on and has set a game
 bot.on('ready', () => {
-	bot.user.setGame('beta v0.0000001', 'https://twitch.tv/lightningdude38', 1);
+	bot.user.setGame('beta v0.0000002', 'https://twitch.tv/lightningdude38', 1);
 	console.log(`Ready! Currently located in ${bot.guilds.size} servers!`);
 });
 
@@ -41,11 +41,41 @@ bot.on('message', (msg) => {
 	if (!msg.content.startsWith(config.prefix) || msg.author.bot) return;
 
 	if (msg.content.includes('version')) {
-		msg.channel.send('the bot is still in what i like to describe as "mega-beta"');
+		msg.channel.send('beta v0.0000002');
 	} else if (msg.content.startsWith(config.prefix + 'help')) {
 		msg.channel.send('uhhhhhhhhh...');
 	} else if (msg.content.startsWith(config.prefix + 'ping')) {
 		msg.channel.send(`Pong! Ping = \`${Math.round(bot.ping)}\` ms`)
+	} else if (msg.content.startsWith(config.prefix + 'helptest')) {
+		msg.channel.send({embed: {
+    	color: 3447003,
+    	author: {
+      		name: bot.user.username + ' help',
+      		icon_url: bot.user.avatarURL
+    	},
+    	title: "This is an embed",
+    	url: "http://google.com",
+    	description: "This is a test embed to showcase what they look like and what they can do.",
+    fields: [{
+        name: "Fields",
+        value: "They can have different fields with small headlines."
+      		},
+      		{
+        name: "Masked links",
+        value: "You can put [masked links](http://google.com) inside of rich embeds."
+      		},
+      		{
+        name: "Markdown",
+        value: "You can put all the *usual* **__Markdown__** inside of them."
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: bot.user.avatarURL,
+      text: "© Example"
+    		}
+  		}
+	});
 	}
 
 	//Bot author only commands
