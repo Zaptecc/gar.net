@@ -1,5 +1,5 @@
 exports.run = async(bot, message, args, level) => {
-  msg.channel.send(`Pong! Your current latency is \`${Math.round(bot.ping)}\` ms!`)
+  message.channel.send(`Pong! Your current latency is \`${Math.round(bot.ping)}\` ms!`)
 };
 
 exports.conf = {

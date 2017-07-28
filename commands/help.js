@@ -43,6 +43,6 @@ exports.conf = {
 
 exports.help = {
     name: 'help',
-    description: 'help',
+    description: 'Explains each command and any arguments you can use!',
     usage: 'help'
 };
