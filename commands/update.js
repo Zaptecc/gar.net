@@ -35,7 +35,7 @@ exports.conf = {
     enabled: true,
     guildOnly: false,
     aliases: ['upd', 'Update', 'upd8'],
-    permLevel: 10
+    permLevel: 3
 };
 
 exports.help = {
