@@ -13,22 +13,3 @@ module.exports = (bot, message) => {
             cmd.run(bot, message, args, perms);
         }
 };
-
-
-bot.on('message', (msg) => {
-
-	//NON-COMMANDS
-
-	if (msg.content.includes('❤')) {
-		msg.channel.send(':heart::heart::heart:')
-	} else if (msg.content.includes('shit')) {
-        msg.react('💩')
-        console.log('somebody said shit')
-	} else if (msg.content.includes('ayy')) {
-		msg.react('🇱')
-		setTimeout(function(){msg.react('🇲')}, 1000)
-		setTimeout(function(){msg.react('🅰')}, 2000)
-        setTimeout(function(){msg.react('🇴')}, 3000)
-        console.log('aliens')
-	}
-});
