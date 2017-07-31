@@ -37,19 +37,3 @@ bot.aliases = new discord.Collection();
     bot.login(bot.config.token);
 
 }());
-
-bot.on('message', (msg) => {
-
-	//NON-COMMANDS
-
-	if (msg.content.includes('❤')) {
-		msg.channel.send(':heart::heart::heart:')
-	} else if (msg.content.includes('shit')) {
-		msg.react('💩')
-	} else if (msg.content.includes('ayy')) {
-		msg.react('🇱')
-		setTimeout(function(){msg.react('🇲')}, 500)
-		setTimeout(function(){msg.react('🅰')}, 1000)
-		setTimeout(function(){msg.react('🇴')}, 1500)
-	}
-});
