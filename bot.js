@@ -50,7 +50,7 @@ bot.on('message', (msg) => {
 	} else if (msg.content.includes('ayy')) {
 		msg.react('🇱')
 		setTimeout(function(){msg.react('🇲')}, 1000)
-		setTimeout(function(){msg.react('🅰')}, 2000)
+		setTimeout(function(){msg.react('🇦')}, 2000)
         setTimeout(function(){msg.react('🇴')}, 3000)
         console.log('aliens')
 	}
