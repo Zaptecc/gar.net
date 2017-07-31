@@ -10,7 +10,7 @@ exports.run = (bot, message, args) => {
         .setTimestamp()
         .setFooter('UPDATE')
     message.channel.send({embed: updateEmbed}).then(e => {
-        var update = child_process.execSync('git pull origin').toString();
+        var update = child_process.execSync('git pull origin master').toString();
         if (update.indexOf("Already up-to-date.") > -1) {
             var updateEmbed3 = new Discord.RichEmbed()
                 .setColor([r, g, b])
