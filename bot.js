@@ -43,15 +43,27 @@ bot.on('message', (msg) => {
 	//NON-COMMANDS
 
 	if (msg.content.includes('❤')) {
-		msg.channel.send(':heart::heart::heart:')
-	} else if (msg.content.includes('shit')) {
-        msg.react('💩')
-        console.log('somebody said shit')
-	} else if (msg.content.includes('ayy')) {
+		msg.channel.send('❤❤❤')
+	} else if (/\bs+h+i+t+\b/gi.test(msg.content)) {
+		msg.react('💩')
+        console.log('Somebody Said a bad word')
+	} else if (/\ba+y+y+\b/gi.test(msg.content)) {
 		msg.react('🇱')
 		setTimeout(function(){msg.react('🇲')}, 1000)
 		setTimeout(function(){msg.react('🇦')}, 2000)
         setTimeout(function(){msg.react('🇴')}, 3000)
-        console.log('aliens')
-	}
+        console.log('ayyliens')
+	} else if (/\ba+s+s+\b/gi.test(msg.content)) {
+        msg.react('🍑')
+        console.log('somebody sAid A bAd word')
+    } else if (/\bd+i+c+k+\b/gi.test(msg.content)) {
+        msg.react('🍆')
+        console.log('someboDy saiD a baD worD')
+    } else if (/\bw+e+t+\b/gi.test(msg.content)) {
+        msg.react('💦')
+        console.log('somebody said a bad Word')
+    } else if (/\bh+e+l+l+\b/gi.test(msg.content)) {
+        msg.react('🔥')
+        console.log('somboHdy saiHd a baHd word')
+    }
 });
