@@ -24,6 +24,7 @@
     "ffmpeg-binaries": "^3.2.2-3",
     "libsodium": "^0.7.2",
     "node-opus": "^0.2.7",
+    "os": "^0.1.1",
     "os-utils": "0.0.14",
     "supervisor": "^0.12.0",
     "uws": "^8.14.1"

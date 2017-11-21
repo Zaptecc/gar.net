@@ -4,9 +4,12 @@ const os = require('os-utils')
 exports.run = async(bot, message, args, permLevel) => {
 
             var osName = os.platform();
-            var cpuUsage = os.cpuUsage();
+            var cpuCount = os.cpuCount();
             var freeMem = os.freemem();
             var totalMem = os.totalmem();
+            var CPUUusage = os.cpuUsage(function(usage){
+                var CPUUusage = usage
+            })
 
 		message.channel.send({embed: {
     	color: 3447003,
@@ -16,14 +19,14 @@ exports.run = async(bot, message, args, permLevel) => {
     	},
     	title: "Bot Hosting Information",
     	url: "http://bit.ly/2A7257T",
-    	description: "This shows all commands and what they do/what they are used for.",
+    	description: "This gives information about the computer that gar.net is being hosted on, which is probably a Raspberry Pi.",
     fields: [{
         name: "Operating System 🖥️",
-        value: osName
+        value: osName + '  (darwin probably means MacOS)'
       		},
       		{
         name: "CPU Usage? *insert cpu emoji*",
-        value: 'test'
+        value: 'CPU Usage (%) ' + CPUUusage
       		},
       		{
         name: "Free RAM *insert ram emoji*",
@@ -37,7 +40,7 @@ exports.run = async(bot, message, args, permLevel) => {
     		}
   		}
 	});
-            console.log('should have sent?')
+            console.log('somebody ran stats, if they spammed ur computer is probably getting rekt')
 }
 
 
