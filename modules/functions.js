@@ -1,7 +1,7 @@
 module.exports = (bot) => {
     bot.permLevel = message => {
         let permlvl = 0;
-        if(message.author.id === bot.config.owner) return 10;
+        if(message.author.id === bot.config.owner) permlvl = 4;
         if (!message.guild || !message.member) return 0;
         try {
             let modRole = message.guild.roles.find('', bot.config.modRoleName);
@@ -57,7 +57,7 @@ module.exports = (bot) => {
         let errorMsg = err.stack.replace(new RegExp(`${__dirname}\/`, 'g'), './');
         console.error("Uncaught Exception: ", errorMsg);
     });
-    process.on("unhandledRejection", err => {
+    process.on("unhandledRejection", (err) => {
         console.error("Uncaught Promise Error: ", err);
     });
 };

@@ -77,6 +77,7 @@ bot.on('message', (msg) => {
 			msg.member.voiceChannel.join()
 			  .then(connection => { // Connection is an instance of VoiceConnection
 				msg.channel.send('I have successfully connected to the voice channel!');
+				msg.delete(1000)
 			  })
 			  .catch(console.log);
 		  } else {

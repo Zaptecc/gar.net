@@ -1,6 +1,7 @@
 const discord = require("discord.js");
 const { promisify } = require('util');
 const readdir = promisify(require("fs").readdir);
+const Music = require('discord.js-musicbot-addon');
 const bot = new discord.Client();
 bot.config = require("./config.json");
 require("./modules/functions.js")(bot);
@@ -37,33 +38,3 @@ bot.aliases = new discord.Collection();
     bot.login(bot.config.token);
 
 }());
-
-bot.on('message', (msg) => {
-
-	//NON-COMMANDS
-
-	if (msg.content.includes('❤')) {
-		msg.channel.send('❤❤❤')
-	} else if (/\bs+h+i+t+\b/gi.test(msg.content)) {
-		msg.react('💩')
-        console.log('Somebody Said a bad word')
-	} else if (/\ba+y+y+\b/gi.test(msg.content)) {
-		msg.react('🇱')
-		setTimeout(function(){msg.react('🇲')}, 1000)
-		setTimeout(function(){msg.react('🇦')}, 2000)
-        setTimeout(function(){msg.react('🇴')}, 3000)
-        console.log('ayyliens')
-	} else if (/\ba+s+s+\b/gi.test(msg.content)) {
-        msg.react('🍑')
-        console.log('somebody sAid A bAd word')
-    } else if (/\bd+i+c+k+\b/gi.test(msg.content)) {
-        msg.react('🍆')
-        console.log('someboDy saiD a baD worD')
-    } else if (/\bw+e+t+\b/gi.test(msg.content)) {
-        msg.react('💦')
-        console.log('somebody said a bad Word')
-    } else if (/\bh+e+l+l+\b/gi.test(msg.content)) {
-        msg.react('🔥')
-        console.log('somboHdy saiHd a baHd word')
-    }
-});
