@@ -24,6 +24,9 @@ module.exports = (bot, message) => {
     } else if (/\bh+e+l+l+\b/gi.test(message.content)) {
         message.react('🔥')
         console.log('somboHdy saiHd a baHd word')
+    } else if (/\bh+e+i+l+\b/gi.test(message.content)) {
+        message.react('🇩🇪')
+        console.log('its hailing')
     }
 
     if (message.content.indexOf(bot.config.prefix) !== 0) return;

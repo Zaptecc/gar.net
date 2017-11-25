@@ -7,9 +7,7 @@ exports.run = async(bot, message, args, permLevel) => {
             var cpuCount = os.cpuCount();
             var freeMem = os.freemem();
             var totalMem = os.totalmem();
-            var CPUUusage = os.cpuUsage(function(usage){
-                var CPUUusage = usage
-            })
+            var CPUUusage = os.cpuUsage(function(){})
 
 		message.channel.send({embed: {
     	color: 3447003,
@@ -30,7 +28,7 @@ exports.run = async(bot, message, args, permLevel) => {
       		},
       		{
         name: "Free RAM *insert ram emoji*",
-        value: 'test'
+        value: 'test' + ' out of ' + 'test'
       }
     ],
     timestamp: new Date(),
