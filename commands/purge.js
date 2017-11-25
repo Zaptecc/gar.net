@@ -6,7 +6,7 @@ exports.run = (bot, message, args, level) => {
         message.channel.send(`${args[0]} messages purged by ${message.author}! :white_check_mark:`)
 			.then(msg => setTimeout(function() {msg.delete()}, 5000));
     } else {
-		message.channel.sendMessage("Please specify a number!");
+		message.channel.send("Please specify a number!");
 	}
 };
 
