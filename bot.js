@@ -38,3 +38,5 @@ bot.aliases = new discord.Collection();
     bot.login(bot.config.token);
 
 }());
+
+//This is a test to see is ,update actually works
