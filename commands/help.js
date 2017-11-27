@@ -18,7 +18,7 @@ exports.run = async(bot, message, args, level) => {
         } else if (bot.aliases.has(args[0])) {
             command = bot.commands.get(bot.aliases.get(args[0]));
         };
-        if (!command) return message.reply(`That command \`${args[0]}\` doesn't seem to exist, nor is it an alias. Try again!`);
+        if (!command) return message.reply(`The command \`${args[0]}\` doesn't seem to exist, nor is it an alias. Try again!`);
         if (bot.commands.has(command)) {
             command = bot.commands.get(command);
             var helpCommand = new Discord.RichEmbed();

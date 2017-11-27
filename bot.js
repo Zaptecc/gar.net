@@ -1,7 +1,6 @@
 const discord = require("discord.js");
 const { promisify } = require('util');
 const readdir = promisify(require("fs").readdir);
-const Music = require('discord.js-musicbot-addon');
 const bot = new discord.Client();
 bot.config = require("./config.json");
 require("./modules/functions.js")(bot);

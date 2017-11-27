@@ -1,5 +1,5 @@
 exports.run = async(bot, message, args, level) => {
-    message.channel.send('beta v0.0000003?');
+    message.channel.send(`The bot is currently on ` + bot.config.version + '!');
 };
 
 exports.conf = {

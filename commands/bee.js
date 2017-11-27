@@ -9,7 +9,7 @@ exports.run = async(bot, message, args, permLevel) => {
     message.channel.send("I can't. I'll pick you up.")
     message.channel.send("Looking sharp.")
     message.channel.send("Use the stairs! Your father paid good money for those.")
-    console.log("beeeeeeeeee")
+    console.log
 };
 
 exports.conf = {

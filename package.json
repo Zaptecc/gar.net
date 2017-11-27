@@ -19,10 +19,10 @@
   "homepage": "https://github.com/lightningdude38/gar.net#readme",
   "dependencies": {
     "bufferutil": "^3.0.3",
-    "discord.js": "^11.2.1",
+    "discord.js": "git://github.com/hydrabolt/discord.js.git#stable",
     "discord.js-musicbot-addon": "^1.7.0",
     "erlpack": "^0.1.2",
-    "ffmpeg-binaries": "^3.2.2-3",
+    "ffmpeg-binaries": "^3.2.2",
     "libsodium": "^0.7.2",
     "node-opus": "^0.2.7",
     "os": "^0.1.1",
