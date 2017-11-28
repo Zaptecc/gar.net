@@ -7,13 +7,13 @@ module.exports = (bot) => {
             let modRole = message.guild.roles.find('', bot.config.modRoleID);
             if (modRole && message.member.roles.has(modRole.id)) permlvl = 2;
         } catch (e) {
-            console.warn("modRoleName not found. Skipping Mod (level 2) check"); 
+            console.warn("modRoleName/ID not found. Skipping Mod (level 2) check"); 
         }
         try {
             let adminRole = message.guild.roles.find('', bot.config.adminRoleID);
             if (adminRole && message.member.roles.has(adminRole.id)) permlvl = 3;
         } catch (e) {
-            console.warn("adminRoleName not found. Skipping Admin (level 3) check");
+            console.warn("adminRoleName/ID not found. Skipping Admin (level 3) check");
         }
         if(message.author.id === message.guild.owner.id) permlvl = 3;
         return permlvl;

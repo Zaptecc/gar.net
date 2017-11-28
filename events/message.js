@@ -44,8 +44,12 @@ module.exports = (bot, message) => {
     }
     if (message.content.includes('fingerguns')) {
         const finger_guns = bot.emojis.get('310267478846603266')
+        message.react(finger_guns)
         message.channel.send(`${finger_guns}`)
         console.log('finger guns')
+    }
+    if (message.content.includes('🤦')) {
+        message.channel.send({ files: [`./resources/facepalm.png`] })
     }
     if (message.isMentioned(bot.user)) {
         if (message.content.includes('prefix')) {
