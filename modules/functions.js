@@ -4,7 +4,7 @@ module.exports = (bot) => {
         if(message.author.id === bot.config.owner) permlvl = 4;
         if (!message.guild || !message.member) return 0;
         try {
-            let modRole = message.guild.roles.find('', bot.config.modRoleID);
+            let modRole = message.guild.roles.find('Admin', bot.config.modRoleID);
             if (modRole && message.member.roles.has(modRole.id)) permlvl = 2;
         } catch (e) {
             console.warn("modRoleName/ID not found. Skipping Mod (level 2) check"); 

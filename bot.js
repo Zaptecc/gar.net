@@ -1,12 +1,28 @@
 const discord = require("discord.js");
 const { promisify } = require('util');
 const readdir = promisify(require("fs").readdir);
+const YTDL = require('ytdl-core')
 const bot = new discord.Client();
 bot.config = require("./config.json");
 require("./modules/functions.js")(bot);
 
 bot.commands = new discord.Collection();
 bot.aliases = new discord.Collection();
+
+
+function play(connection, message) {
+    var server = servers[message.guild.id]
+
+    server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}))
+
+    server.queue.shift()
+
+    server.dispatcher.on("end", function() {
+        if (server.queue[0]) play(connection, message)
+        else connection.disconnect()
+    })
+}
+
 
 (async function() {
 

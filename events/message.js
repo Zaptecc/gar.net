@@ -42,6 +42,9 @@ module.exports = (bot, message) => {
         message.react('🇩🇪')
         console.log('its hailing')
     }
+    if (message.content.includes('lemayo') || message.content.includes('lmayo') || message.content.includes('lemayonnaise')) {
+        message.channel.send({ files: [`./resources/lemayo.png`] })
+    }
     if (message.content.includes('fingerguns')) {
         const finger_guns = bot.emojis.get('310267478846603266')
         message.react(finger_guns)
@@ -55,8 +58,11 @@ module.exports = (bot, message) => {
         if (message.content.includes('prefix')) {
             message.reply(`my prefix for this server is \`` + bot.config.prefix + '\`')
             console.log('somebody requested the prefix')
-        } else if (/\bh+i+\b/gi.test(message.content)) {
+        } else if (/\bh+i+\b/gi.test(message.content) || /\bh+e+y+\b/gi.test(message.content)) {
             message.channel.send('hey there')
+            console.log('h e y')
+        } else if (message.content.includes('token')) {
+            message.channel.send('bad')
         }
     }
 
@@ -70,5 +76,7 @@ module.exports = (bot, message) => {
         if (cmd && perms >= cmd.conf.permLevel) {
             bot.log("log", `${message.guild.name}/#${message.channel.name}: ${message.author.username} (${message.author.id}) ran command ${cmd.help.name}`, "CMD");
             cmd.run(bot, message, args, perms);
+        } else {
+            message.channel.send('Either you do not have permission to run this command or it does not exist!')
         }
 };
