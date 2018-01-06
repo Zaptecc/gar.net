@@ -13,19 +13,19 @@ exports.run = async(bot, message, args, permLevel) => {
 }
       if (!clean(newNick) || clean(newNick) == ""){
           message.channel.send('Please specify a nickname to set!')
-      } else if(clean(newNick) == "gar.net") {
-          message.guild.members.get(bot.user.id).setNickname(clean(newNick));
+      } else if(clean(newNick) == "gar.net" || clean(newNick) == "remove" || clean(newNick) == "reset") {
+          message.guild.members.get(bot.user.id).setNickname('gar.net');
           message.channel.send('Nickname successfully removed!')
+          console.log('\'' + member.displayName + '\' reset gar.net\'s nickname in server \'' + message.guild + '\'!');
       } else {
           message.guild.members.get(bot.user.id).setNickname(clean(newNick));
           message.channel.send('Successfully set nickname to \`' + clean(newNick) + '\`!')
+          console.log('\'' + member.displayName + '\' set gar.net\'s nickname to \'' + clean(newNick) + '\' in server \'' + message.guild + '\'!');
       }
   
       process.on("unhandledRejection", (err) => {
           message.channel.send(':x: Error occurred! Please check that I have the right permissions!');
       });
-  
-      console.log('\'' + member.displayName + '\' set gar.net\'s nickname to \'' + clean(newNick) + '\' in server \'' + message.guild + '\'!');
 
 };
 

@@ -20,6 +20,7 @@
   "dependencies": {
     "bufferutil": "^3.0.3",
     "discord.js": "git://github.com/hydrabolt/discord.js.git#stable",
+    "discord.js-musicbot-addon": "^1.7.2",
     "erlpack": "^0.1.2",
     "ffmpeg-binaries": "^3.2.2",
     "libsodium": "^0.7.2",

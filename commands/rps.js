@@ -27,172 +27,172 @@ exports.run = async(bot, message, args, permLevel) => {
 
         if (choice === "rock") {
             if (throwback == "rock") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 message.channel.send('I picked rock, which makes it a draw! Try again!')
             } else if (throwback == "paper") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${paper_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${paper_right}`);
                 message.channel.send('I picked paper, which means I win! Better luck next time!')
             } else if (throwback == "scissors") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${scissors_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${scissors_right}`);
                 message.channel.send('I picked scissors, which means you win! Congrats!')
             } else {
                 message.channel.send('An error has occurred.')
             }
         } else if (choice === "paper") {
             if (throwback == "rock") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${paper_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${paper_left} ${invisible} ${invisible} ${rock_right}`);
                 message.channel.send('I picked rock, which means you win! Congrats!')
             } else if (throwback == "paper") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${paper_left} ${invisible} ${invisible} ${paper_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${paper_left} ${invisible} ${invisible} ${paper_right}`);
                 message.channel.send('I picked paper, which makes it a draw! Try again!')
             } else if (throwback == "scissors") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${paper_left} ${invisible} ${invisible} ${scissors_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${paper_left} ${invisible} ${invisible} ${scissors_right}`);
                 message.channel.send('I picked scissors, which means I win! Better luck next time!')
             } else {
                 message.channel.send('An error has occurred.')
             }
         } else if (choice === "scissors") {
             if (throwback == "rock") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${scissors_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${scissors_left} ${invisible} ${invisible} ${rock_right}`);
                 message.channel.send('I picked rock, which means I win! Better luck next time!')
             } else if (throwback == "paper") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${scissors_left} ${invisible} ${invisible} ${paper_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${scissors_left} ${invisible} ${invisible} ${paper_right}`);
                 message.channel.send('I picked paper, which means you win! Congrats!')
             } else if (throwback == "scissors") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${scissors_left} ${invisible} ${invisible} ${scissors_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${scissors_left} ${invisible} ${invisible} ${scissors_right}`);
                 message.channel.send('I picked scissors, which makes it a draw! Try again!')
             } else {
                 message.channel.send('An error has occurred.')
             }
         } else if (choice === '✂'){
             if (throwback == "rock") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${scissors_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${scissors_left} ${invisible} ${invisible} ${rock_right}`);
                 message.channel.send('I picked rock, which means I win! Better luck next time!')
             } else if (throwback == "paper") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${scissors_left} ${invisible} ${invisible} ${paper_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${scissors_left} ${invisible} ${invisible} ${paper_right}`);
                 message.channel.send('I picked paper, which means you win! Congrats!')
             } else if (throwback == "scissors") {
-                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                sentMessage = await message.channel.send(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500);
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${rock_left} ${invisible} ${invisible} ${rock_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${rock_left} ${invisible} ${invisible} ${rock_right}`);
                 await sleep(500)
-                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n ${invisible}`);
+                await sentMessage.edit(`${rock_left} ${invisible} ${invisible} ${rock_right}\n${invisible} ${invisible} ${invisible} ${invisible}`);
                 await sleep(500)
-                await sentMessage.edit(`${invisible} \n${scissors_left} ${invisible} ${invisible} ${scissors_right}`);
+                await sentMessage.edit(`${invisible} ${invisible} ${invisible} ${invisible}\n${scissors_left} ${invisible} ${invisible} ${scissors_right}`);
                 message.channel.send('I picked scissors, which makes it a draw! Try again!')
             } else {
                 message.channel.send('An error has occurred.')

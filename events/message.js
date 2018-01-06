@@ -15,6 +15,14 @@ module.exports = (bot, message) => {
 		message.react('💩')
         console.log('Somebody Said a bad word')
     }
+    if (/\bs+h+i+t+e+\b/gi.test(message.content)) {
+		message.react('💩')
+        console.log('Somebody Said a bad word')
+    }
+    if (/\bs+h+i+e+t+\b/gi.test(message.content)) {
+		message.react('💩')
+        console.log('Somebody Said a bad word')
+    }
     if (/\ba+y+y+\b/gi.test(message.content)) {
 		message.react('🇱')
 		setTimeout(function(){message.react('🇲')}, 1000)
@@ -73,6 +81,10 @@ module.exports = (bot, message) => {
     
         let perms = bot.permLevel(message);
         
+        if (command == 'play' || command == 'mhelp' || command == 'stop' || command == 'volume' || command == 'skip' || command == 'pause' || command == 'resume' || command == 'np') {
+            return
+        } 
+
         if (cmd && perms >= cmd.conf.permLevel) {
             bot.log("log", `${message.guild.name}/#${message.channel.name}: ${message.author.username} (${message.author.id}) ran command ${cmd.help.name}`, "CMD");
             cmd.run(bot, message, args, perms);
