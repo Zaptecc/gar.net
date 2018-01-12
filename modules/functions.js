@@ -4,13 +4,13 @@ module.exports = (bot) => {
         if(message.author.id === bot.config.owner) permlvl = 4;
         if (!message.guild || !message.member) return 0;
         try {
-            let modRole = message.guild.roles.find('Bots', bot.config.modRoleID);
+            let modRole = message.guild.roles.find('Bots');
             if (modRole && message.member.roles.has(modRole.id)) permlvl = 2;
         } catch (e) {
             console.warn("modRoleName/ID not found. Skipping Mod (level 2) check"); 
         }
         try {
-            let adminRole = message.guild.roles.find('Big Boy', bot.config.adminRoleID);
+            let adminRole = message.guild.roles.find('Big Boy');
             if (adminRole && message.member.roles.has(adminRole.id)) permlvl = 3;
         } catch (e) {
             console.warn("adminRoleName/ID not found. Skipping Admin (level 3) check");
