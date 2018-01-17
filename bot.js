@@ -17,7 +17,7 @@ const music = new Music(bot, {
     global: false,         // Non-server-specific queues.
     maxQueueSize: 10,     // Maximum queue size of 25.
     clearInvoker: false,   // If permissions applicable, allow the bot to delete the messages that invoke it.
-    helpCmd: 'mhelp',     //Sets the name for the help command.
+    helpCmd: 'music',     //Sets the name for the help command.
     playCmd: 'play',     //Sets the name for the 'play' command.
     volumeCmd: 'volume',  //Sets the name for the 'volume' command.
     leaveCmd: 'stop',    //Sets the name for the 'leave' command.
