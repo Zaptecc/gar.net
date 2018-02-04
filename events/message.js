@@ -50,6 +50,10 @@ module.exports = (bot, message) => {
         message.react('🇩🇪')
         console.log('its hailing')
     }
+    if (/\bl+m+a+o+\b/gi.test(message.content)) {
+        message.channel.send('ayy')
+        console.log('ayyyyyyyyylmao')
+    }
     if (message.content.includes('lemayo') || message.content.includes('lmayo') || message.content.includes('lemayonnaise')) {
         message.channel.send({ files: [`./resources/lemayo.png`] })
     }
@@ -88,7 +92,10 @@ module.exports = (bot, message) => {
         if (cmd && perms >= cmd.conf.permLevel) {
             bot.log("log", `${message.guild.name}/#${message.channel.name}: ${message.author.username} (${message.author.id}) ran command ${cmd.help.name}`, "CMD");
             cmd.run(bot, message, args, perms);
+        } else if(cmd && perms < cmd.conf.permLevel) {
+            message.channel.send('You do not have permission to run this command!');
+            bot.log("log", `${message.guild.name}/#${message.channel.name}: ${message.author.username} (${message.author.id}) attempted to run command ${cmd.help.name}, but does not have sufficient permissions`, "CMD");
         } else {
-            message.channel.send('Either you do not have permission to run this command or it does not exist!')
+            message.channel.send('This command does not exist!');
         }
 };
