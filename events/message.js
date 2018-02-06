@@ -50,10 +50,6 @@ module.exports = (bot, message) => {
         message.react('🇩🇪')
         console.log('its hailing')
     }
-    if (/\bl+m+a+o+\b/gi.test(message.content)) {
-        message.channel.send('ayy')
-        console.log('ayyyyyyyyylmao')
-    }
     if (message.content.includes('lemayo') || message.content.includes('lmayo') || message.content.includes('lemayonnaise')) {
         message.channel.send({ files: [`./resources/lemayo.png`] })
     }
