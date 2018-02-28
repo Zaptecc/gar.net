@@ -32,7 +32,7 @@ module.exports = (bot, message) => {
                 }
             });
         } else {
-            bot.promptForUpvote(message, 'Google');
+            bot.promptForUpvote(message, this.name);
         }
 });
 

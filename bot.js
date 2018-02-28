@@ -4,6 +4,12 @@ const readdir = promisify(require("fs").readdir);
 const YTDL = require('ytdl-core')
 const Music = require('discord.js-musicbot-addon')
 const bot = new discord.Client();
+var GoogleSearch = require('google-search');
+var google = new GoogleSearch({
+    key: config.key,
+    cx: config.cx,
+});
+
 bot.config = require("./config.json");
 require("./modules/functions.js")(bot);
 
