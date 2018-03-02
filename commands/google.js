@@ -1,12 +1,10 @@
-module.exports = (bot, message) => {
+exports.run = (bot, message, google) => {
 
-    var google = new GoogleSearch({
-        key: bot.config.key,
-        cx: bot.config.cx,
-    });
+//    var google = new GoogleSearch({
+//        key: bot.config.key,
+//        cx: bot.config.cx,
+//    });
 
-    bot.checkForUpvote(message).then(res => {
-        if (res) {
             google.build({
                 q: message.content,
                 num: 1,
@@ -36,10 +34,8 @@ module.exports = (bot, message) => {
                     message.channel.send({ embed: results });
                 }
             });
-        } else {
-            bot.promptForUpvote(message, this.name);
-        }
-});
+
+
 
 }
 
@@ -48,7 +44,7 @@ exports.conf = {
     enabled: true,
     guildOnly: false,
     aliases: [],
-    permLevel: 0
+    permLevel: 1
 };
 
 exports.help = {
