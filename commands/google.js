@@ -1,5 +1,10 @@
 module.exports = (bot, message) => {
 
+    var google = new GoogleSearch({
+        key: bot.config.key,
+        cx: bot.config.cx,
+    });
+
     bot.checkForUpvote(message).then(res => {
         if (res) {
             google.build({
