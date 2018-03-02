@@ -1,9 +1,16 @@
-exports.run = (bot, message, google) => {
+const Discord = require('discord.js')
 
-//    var google = new GoogleSearch({
-//        key: bot.config.key,
-//        cx: bot.config.cx,
-//    });
+exports.run = (bot, message) => {
+
+    var GoogleSearch = require('google-search');
+
+    var google = new GoogleSearch({
+        key: bot.config.key,
+        cx: bot.config.cx,
+    });
+
+
+
 
             google.build({
                 q: message.content,
@@ -30,7 +37,7 @@ exports.run = (bot, message, google) => {
                         .setDescription(desc + ' [more](' + link + ')')
                         .setTimestamp()
                         .setColor(message.guild.me.displayColor)
-                        .setFooter('Powered by RoBot', bot.user.avatarURL);
+                        .setFooter('Powered by RoBot', 'https://cdn.discordapp.com/avatars/302555306603446283/3dae86c730e32b495d944c94bb302fe4.png?size=2048');
                     message.channel.send({ embed: results });
                 }
             });

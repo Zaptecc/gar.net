@@ -3,7 +3,6 @@ const { promisify } = require('util');
 const readdir = promisify(require("fs").readdir);
 const YTDL = require('ytdl-core')
 const Music = require('discord.js-musicbot-addon')
-const GoogleSearch = require('google-search');
 const bot = new discord.Client();
 
 
@@ -13,10 +12,6 @@ require("./modules/functions.js")(bot);
 bot.commands = new discord.Collection();
 bot.aliases = new discord.Collection();
 
-const google = new GoogleSearch(bot, {
-    key: bot.config.key,
-    cx: bot.config.cx,
-});
 
 const music = new Music(bot, {
     youtubeKey: bot.config.ytkey,       //YouTube API key, stored in the config for privacy ;)
