@@ -9,13 +9,13 @@ exports.run = async(bot, message, args, permLevel) => {
         let choice = args[0]
         let throwback = Math.floor(Math.random() * 3) + 1
     
-        const scissors_right = bot.emojis.get('385093082040893462')
-        const scissors_left = bot.emojis.get('385093081873252354')
-        const rock_right = bot.emojis.get('385093082129104896')
-        const rock_left = bot.emojis.get('385093082082967552')
-        const paper_right = bot.emojis.get('385093082078642176')
-        const paper_left = bot.emojis.get('385093082053476352')
-        const invisible = bot.emojis.get('385123993889406978')
+        const scissors_right = bot.emojis.get('424769083335245833')
+        const scissors_left = bot.emojis.get('424769075894550538')
+        const rock_right = bot.emojis.get('424769065928884225')
+        const rock_left = bot.emojis.get('424769056797622282')
+        const paper_right = bot.emojis.get('424769046848864298')
+        const paper_left = bot.emojis.get('424769033922150400')
+        const invisible = bot.emojis.get('424769091790962688')
 
         if (throwback === 1) {
             throwback = "rock"
