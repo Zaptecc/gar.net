@@ -7,8 +7,6 @@ exports.run = async(bot, message, args, permLevel) => {
         "http://media0.giphy.com/media/llmZp6fCVb4ju/giphy.gif",
         "http://media1.giphy.com/media/QbkL9WuorOlgI/giphy.gif",
         "https://m.popkey.co/62c667/9Eyp6_s-200x150.gif",
-        "https://vignette.wikia.nocookie.net/steven-universe/images/9/99/Amythest_Pearl_hug.gif/revision/latest?cb=20150215004825",
-        "http://vignette4.wikia.nocookie.net/dpwikia/images/2/20/S03e11_Danny_and_Dani_hug.gif/revision/latest?cb=20150216165443",
         "http://cdn.smosh.com/sites/default/files/ftpuploads/bloguploads/0413/epic-hugs-regular-show.gif",
         "https://media1.tenor.com/images/a71b123666e08bb6ad336cd1625c0cdb/tenor.gif?itemid=3525606",
         "https://media.giphy.com/media/8KKRIP5ZHUo2k/giphy.gif"
