@@ -5,7 +5,7 @@ const os = require('os')
 
 exports.run = async(bot, message, args, permLevel) => {
     
-    const garnett_emoji = bot.emojis.get('384199238365741067')
+    const garnett_emoji = bot.emojis.get('424768866431008785')
     var vals = {},
     date = new Date(bot.uptime);
 
