@@ -6,7 +6,7 @@ module.exports = (bot, message) => {
     console.log("[DM] " + message.channel.recipient.username + " -> " + bot.user.username + " | " + message.content)
     }
     
-    if (message.author.bot) return;
+    if (message.author.bot || message.author.id == '180124505044287488' || message.author.id == '255425576418934784' || message.author.id == '157638851224010752') return;
 
     if (message.content.includes('❤')) {
 		message.channel.send('❤❤❤')
