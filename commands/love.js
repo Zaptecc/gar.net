@@ -47,7 +47,7 @@ exports.run = (bot, message, args, permLevel) => {
 		if (loved.id == '226999841358610432' || loved.id == '174687224988827659' || loved.id == '243174457336791041' || loved.id == '163136022106865664') {
 			message.channel.send(`**${loved.username}**, ${extList[Math.floor(Math.random()*extList.length)]}`)
 		} else if (loved.id == '110525419609919488') {
-            message.channel.send(`**${loved.username}**, you are garbage and nobody likes you.`)
+            message.channel.send(`**${loved.username}**, you are loved, and everyone likes you.`)
         } else {
 			message.channel.send(`**${loved.username}**, ${list[Math.floor(Math.random()*list.length)]}`);
 		}
