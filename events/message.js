@@ -1,5 +1,5 @@
 module.exports = async (bot, message) => {
-    
+    const Discord = require('discord.js');
     if (message.content.toLowerCase().includes('garnett')||message.content.toLowerCase().includes('110525419609919488')||message.content.toLowerCase().includes('garnet')) {
 		//if (message.author.id == '207601549160087553' || message.author.id == '259430296636751873') return;
 		if (message.guild.members.get('110525419609919488')) {
