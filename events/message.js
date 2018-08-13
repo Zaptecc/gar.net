@@ -1,5 +1,16 @@
-module.exports = (bot, message) => {
+module.exports = async (bot, message) => {
     
+    if (message.content.toLowerCase().includes('garnett')||message.content.toLowerCase().includes('110525419609919488')||message.content.toLowerCase().includes('garnet')) {
+		//if (message.author.id == '207601549160087553' || message.author.id == '259430296636751873') return;
+		if (message.guild.members.get('110525419609919488')) {
+			mentionedEmbed = new Discord.RichEmbed()
+			.setTitle(message.guild.name + ' - ' + message.channel.name)
+			.setAuthor(message.author.username, message.author.avatarURL)
+			.setDescription(message.content)
+			bot.users.get('110525419609919488').send({embed: mentionedEmbed});
+		}
+    }
+
     if (message.channel.type === "dm" && message.author.id == bot.user.id) {
     console.log("[DM] " + bot.user.username + " -> " + message.channel.recipient.username + " | " + message.content)
     } else if (message.channel.type === "dm" && message.author.id != bot.user.id){
@@ -9,7 +20,7 @@ module.exports = (bot, message) => {
     if (message.author.bot || message.author.id == '180124505044287488' || message.author.id == '255425576418934784' || message.author.id == '157638851224010752') return;
 
     if (message.content.includes('❤')) {
-		message.channel.send('❤❤❤')
+		message.react('❤')
     }
     if (/\bs+h+i+t+\b/gi.test(message.content)) {
 		message.react('💩')
