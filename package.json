@@ -32,6 +32,7 @@
     "libsodium": "^0.7.6",
     "lodash": "^4.17.15",
     "minimalist": "^1.0.0",
+    "minimist": "^1.2.5",
     "node-fetch": "^2.6.0",
     "node-opus": "^0.3.3",
     "opusscript": "0.0.4",
