@@ -2,7 +2,7 @@ exports.run = async(bot, message, args, level) => {
       const Discord = require('discord.js');
     if (!args[0]) {
         const myCommands = bot.commands.filter(c => c.conf.permLevel <= level);
-        var helpbox = new Discord.RichEmbed();
+        var helpbox = new Discord.MessageEmbed();
         helpbox.setTitle("Command List")
                .setDescription(`Use ${bot.config.prefix}help <commandname> for details`)
                .setColor([Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256)])
@@ -21,7 +21,7 @@ exports.run = async(bot, message, args, level) => {
         if (!command) return message.reply(`The command \`${args[0]}\` doesn't seem to exist, nor is it an alias. Try again!`);
         if (bot.commands.has(command)) {
             command = bot.commands.get(command);
-            var helpCommand = new Discord.RichEmbed();
+            var helpCommand = new Discord.MessageEmbed();
             helpCommand.setTitle(command.help.name)
             .addField('Description', `${command.help.description}`)
             .addField('Usage', `${bot.config.prefix}${command.help.usage}`)

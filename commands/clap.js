@@ -4,7 +4,7 @@ exports.run = async(bot, message, args, permLevel) => {
 
     message.delete()
     let txt = args.slice(0).join(" 👏 ");
-    message.channel.send('**' + member.displayName + '** ---> ' + txt)
+    message.channel.send('**' + member.displayName + '** --->  👏 ' + txt + ' 👏')
 
     console.log;
 

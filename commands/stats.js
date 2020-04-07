@@ -5,20 +5,20 @@ const os = require('os')
 
 exports.run = async(bot, message, args, permLevel) => {
     
-    const garnett_emoji = bot.emojis.get('424768866431008785')
+    const garnett_emoji = bot.emojis.cache.get('424768866431008785')
     var vals = {},
     date = new Date(bot.uptime);
 
     vals.memory = Math.round((os.totalmem() - os.freemem()) / 1000000),
     vals.totalmem = Math.round(os.totalmem() / 1000000),
     vals.strDate = date.getUTCDate() - 1 + "d " + date.getUTCHours() + "h " + date.getUTCMinutes() + "m " + date.getUTCSeconds() + "s",
-    vals.owner = bot.users.get(require('../config.json').owner),
+    vals.owner = bot.users.cache.get(require('../config.json').owner),
 
     vals.shardid = 1
     vals.shardcount = 1
-    vals.guilds = bot.guilds.size
-    vals.channels = bot.channels.size
-    vals.users = bot.users.size
+    vals.guilds = bot.guilds.cache.size
+    vals.channels = bot.channels.cache.size
+    vals.users = bot.users.cache.size
 
     osu.cpuUsage(function(v){
         vals.cpu = v.toFixed(2)
@@ -57,7 +57,7 @@ exports.run = async(bot, message, args, permLevel) => {
         if (osname === "Darwin") {
             var osname = "MacOS"
         }
-        var stats = new Discord.RichEmbed()
+        var stats = new Discord.MessageEmbed()
         .setAuthor(bot.user.username + ' Stats', bot.user.avatarURL)
         .setFooter('This command was heavily based off RoBot v5. Check it out here: http://v.ht/kl4c')
         .setTimestamp()

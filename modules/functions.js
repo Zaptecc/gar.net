@@ -1,7 +1,7 @@
 module.exports = (bot) => {
     bot.permLevel = message => {
         let permlvl = 0;
-        if(message.author.id === bot.config.owner) permlvl = 4;
+
         if (!message.guild || !message.member) return 0;
         try {
             let modRole = message.guild.roles.find(bot.config.modRoleName);
@@ -16,6 +16,7 @@ module.exports = (bot) => {
             console.warn("adminRoleName/ID not found. Skipping Admin (level 3) check");
         }
         if(message.author.id === message.guild.owner.id) permlvl = 3;
+        if (message.author.id === bot.config.owner) permlvl = 4;
         return permlvl;
     };
     bot.log = (type, msg, title) => {
@@ -41,7 +42,7 @@ module.exports = (bot) => {
     text = text
       .replace(/`/g, "`" + String.fromCharCode(8203))
       .replace(/@/g, "@" + String.fromCharCode(8203))
-      .replace(bot.token, "mfa.VkO_2G4Qv3T--NO--lWetW_tjND--TOKEN--QFTm6YGtzq9PH--4U--tG0");
+      .replace(bot.token, "4Qv3T--NO--lWtND--TOKEN--QFTq9PH--4U--tG06GAfj");
     
     return text;
   };

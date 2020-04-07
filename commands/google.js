@@ -5,7 +5,7 @@ exports.run = (bot, message) => {
     var GoogleSearch = require('google-search');
 
     var google = new GoogleSearch({
-        key: bot.config.key,
+        key: bot.config.googlekey,
         cx: bot.config.cx,
     });
 

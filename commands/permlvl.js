@@ -1,7 +1,6 @@
 exports.run = async(bot, message, args, level) => {
 
     let permlvl = 0;
-    if(message.author.id === bot.config.owner) permlvl = 4;
     if (!message.guild || !message.member) return 0;
     try {
         let modRole = message.guild.roles.find(bot.config.modRoleName);
@@ -18,6 +17,7 @@ exports.run = async(bot, message, args, level) => {
         message.channel.send('An error has occurred.')
     }
     if(message.author.id === message.guild.owner.id) permlvl = 3;
+    if(message.author.id === bot.config.owner) permlvl = 4;
 
     message.channel.send('Your permissions level in this server is ' + permlvl + '!')
 

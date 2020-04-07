@@ -1,15 +1,5 @@
 module.exports = async (bot, message) => {
     const Discord = require('discord.js');
-    if (message.content.toLowerCase().includes('garnett')||message.content.toLowerCase().includes('110525419609919488')||message.content.toLowerCase().includes('garnet')) {
-		//if (message.author.id == '207601549160087553' || message.author.id == '259430296636751873') return;
-		if (message.guild.members.get('110525419609919488')) {
-			mentionedEmbed = new Discord.RichEmbed()
-			.setTitle(message.guild.name + ' - ' + message.channel.name)
-			.setAuthor(message.author.username, message.author.avatarURL)
-			.setDescription(message.content)
-			bot.users.get('110525419609919488').send({embed: mentionedEmbed});
-		}
-    }
 
     if (message.channel.type === "dm" && message.author.id == bot.user.id) {
     console.log("[DM] " + bot.user.username + " -> " + message.channel.recipient.username + " | " + message.content)
@@ -17,7 +7,7 @@ module.exports = async (bot, message) => {
     console.log("[DM] " + message.channel.recipient.username + " -> " + bot.user.username + " | " + message.content)
     }
     
-    if (message.author.bot || message.author.id == '180124505044287488' || message.author.id == '255425576418934784' || message.author.id == '157638851224010752') return;
+    if (message.author.bot || message.author.id == '180124505044287488') return;
 
     if (message.content.includes('❤')) {
 		message.react('❤')
@@ -36,9 +26,10 @@ module.exports = async (bot, message) => {
     }
     if (/\ba+y+y+\b/gi.test(message.content)) {
 		message.react('🇱')
-		setTimeout(function(){message.react('🇲')}, 1000)
-		setTimeout(function(){message.react('🇦')}, 2000)
-        setTimeout(function(){message.react('🇴')}, 3000)
+		    .then(() => message.react('🇲'))
+		    .then(() => message.react('🇦'))
+            .then(() => message.react('🇴'))
+            .catch(() => console.error('the ayyliens crashed'));
         console.log('ayyliens')
     }
     if (/\ba+s+s+\b/gi.test(message.content)) {
@@ -73,15 +64,15 @@ module.exports = async (bot, message) => {
     if (message.content.includes('🤦')) {
         message.channel.send({ files: [`./resources/facepalm.png`] })
     }
-    if (message.isMentioned(bot.user)) {
+    if (message.mentions.has(bot.user)) {
         if (message.content.includes('prefix')) {
             message.reply(`my prefix for this server is \`` + bot.config.prefix + '\`')
             console.log('somebody requested the prefix')
         } else if (/\bh+i+\b/gi.test(message.content) || /\bh+e+y+\b/gi.test(message.content)) {
             message.channel.send('hey there')
-            console.log('h e y')
+            console.log('somebody said hi!')
         } else if (message.content.includes('token')) {
-            message.channel.send('bad')
+            message.channel.send('haha good one')
         }
     }
 

@@ -9,13 +9,13 @@ exports.run = async(bot, message, args, permLevel) => {
         let choice = args[0]
         let throwback = Math.floor(Math.random() * 3) + 1
     
-        const scissors_right = bot.emojis.get('424769083335245833')
-        const scissors_left = bot.emojis.get('424769075894550538')
-        const rock_right = bot.emojis.get('424769065928884225')
-        const rock_left = bot.emojis.get('424769056797622282')
-        const paper_right = bot.emojis.get('424769046848864298')
-        const paper_left = bot.emojis.get('424769033922150400')
-        const invisible = bot.emojis.get('424769091790962688')
+        const scissors_right = bot.emojis.cache.get('424769083335245833')
+        const scissors_left = bot.emojis.cache.get('424769075894550538')
+        const rock_right = bot.emojis.cache.get('424769065928884225')
+        const rock_left = bot.emojis.cache.get('424769056797622282')
+        const paper_right = bot.emojis.cache.get('424769046848864298')
+        const paper_left = bot.emojis.cache.get('424769033922150400')
+        const invisible = bot.emojis.cache.get('424769091790962688')
 
         if (throwback === 1) {
             throwback = "rock"
@@ -197,14 +197,6 @@ exports.run = async(bot, message, args, permLevel) => {
             } else {
                 message.channel.send('An error has occurred.')
             }
-        } else if (choice === 'jayce'){
-            message.channel.send('❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤\nInstant win because Jayce is just so amazing!\n❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤')
-        } else if (choice === 'Jayce'){
-            message.channel.send('❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤\nInstant win because Jayce is just so amazing!\n❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤')
-        } else if (choice === 'JAYCE'){
-            message.channel.send('❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤\nInstant win because Jayce is just so amazing!\n❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤')            
-        } else if (choice === '<@!226999841358610432>'){
-            message.channel.send('❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤\nInstant win because Jayce is just so amazing!\n❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤')
         } else {
             message.channel.send('Please say \'rock\', \'paper\', or \'scissors\' after the command!')
         }
@@ -214,7 +206,7 @@ exports.run = async(bot, message, args, permLevel) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: [],
+    aliases: ['rockpaperscissors', 'throw'],
     permLevel: 0
 };
 
@@ -223,7 +215,3 @@ exports.help = {
     description: 'Play rock paper scissors with gar.net!',
     usage: 'rps [rock, paper, scissors]'
 };
-
-//If you have a list with ["rock", "paper", "scissors"], you can find where both players' choices are in the array.
-//If the bot's choice is one more than yours, or the bot's choice is 0 and yours is 2, the bot wins.
-//Vice versa for the player winning. If they're the same, it's a tie. Otherwise the player said something invalid.

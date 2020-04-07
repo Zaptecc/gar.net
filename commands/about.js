@@ -4,7 +4,7 @@ exports.run = (bot, message, args, level) => {
     	color: 3447003,
     	author: {
       		name: 'Coming sooooooon',
-      		icon_url: bot.user.avatarURL
+      		icon_url: bot.user.avatarURL()
     	},
     	title: "Information about the bot and its creator",
     fields: [{
@@ -23,7 +23,7 @@ exports.run = (bot, message, args, level) => {
     timestamp: new Date(),
     footer: {
       icon_url: 'https://cdn.discordapp.com/avatars/110525419609919488/213cabb2fed468774feb8204c080c8c9.png?size=2048',
-      text: "© Garnett Strack 2017"
+      text: "© Garnett Strack 2020"
     		}
   		}
 	});

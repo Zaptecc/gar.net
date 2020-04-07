@@ -1,6 +1,6 @@
 exports.run = async(bot, message, args, permLevel) => {
 
-    message.reply(' my GitHub repository is located at https://github.com/lightningdude38/gar.net')
+    message.reply('my GitHub repository is located at https://github.com/lightningdude38/gar.net')
 
     console.log
 

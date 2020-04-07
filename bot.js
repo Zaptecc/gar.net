@@ -2,7 +2,6 @@ const discord = require("discord.js");
 const { promisify } = require('util');
 const readdir = promisify(require("fs").readdir);
 const YTDL = require('ytdl-core')
-const Music = require('discord.js-musicbot-addon')
 const bot = new discord.Client();
 
 
@@ -12,25 +11,6 @@ require("./modules/functions.js")(bot);
 bot.commands = new discord.Collection();
 bot.aliases = new discord.Collection();
 
-
-const music = new Music(bot, {
-    youtubeKey: bot.config.ytkey,       //YouTube API key, stored in the config for privacy ;)
-    prefix: bot.config.prefix,       // Prefix for the commands.
-    global: false,         // Non-server-specific queues.
-    maxQueueSize: 10,     // Maximum queue size of 25.
-    clearInvoker: false,   // If permissions applicable, allow the bot to delete the messages that invoke it.
-    helpCmd: 'mhelp',     //Sets the name for the help command.
-    playCmd: 'play',     //Sets the name for the 'play' command.
-    volumeCmd: 'volume',  //Sets the name for the 'volume' command.
-    leaveCmd: 'stop',    //Sets the name for the 'leave' command.
-    disableLoop: true,
-    enableQueueStat: true,
-    requesterName: true,
-    anyoneCanSkip: false,
-    anyoneCanAdjust: false,
-    ownerOverMember: true,
-    botOwner: '110525419609919488'
-  });
 
 (async function() {
 
