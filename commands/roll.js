@@ -10,12 +10,12 @@ exports.run = async(bot, message, args, permLevel) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: [],
+    aliases: ['die'],
     permLevel: 0
 };
 
 exports.help = {
-    name: 'die',
+    name: 'roll',
     description: 'Rolls a die randomly with the number of side that you specify!',
-    usage: 'die [number of side]'
+    usage: 'roll [number of sides]'
 };
