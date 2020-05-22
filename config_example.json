@@ -1,0 +1,10 @@
+{
+  "token": "DISCORD_TOKEN_HERE",
+  "prefix": ",",
+  "googlekey": "GOOGLE_API_KEY_HERE",
+  "cx": "OTHER_GOOGLE_THING_HERE",
+  "version": "beta 0.1.0",
+  "owner": "YOUR_DISCORD_ID_HERE",
+  "modRoleName": "Mod",
+  "adminRoleName": "Admin"
+}
