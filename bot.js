@@ -1,7 +1,6 @@
 const discord = require("discord.js");
 const { promisify } = require('util');
 const readdir = promisify(require("fs").readdir);
-const YTDL = require('ytdl-core')
 const bot = new discord.Client();
 
 
@@ -12,10 +11,10 @@ bot.commands = new discord.Collection();
 bot.aliases = new discord.Collection();
 
 
-(async function() {
+const init = async() => {
 
     const commandFiles = await readdir('./commands/');
-    bot.login("log", `Loading ${commandFiles.length} commands!`);
+    bot.log("log", `Loading ${commandFiles.length} commands!`);
     commandFiles.forEach(f => {
         try {
             let commandFile = require(`./commands/${f}`);
@@ -30,7 +29,7 @@ bot.aliases = new discord.Collection();
     });
 
     const eventFiles = await readdir('./events/');
-    bot.login("log", `Loading ${eventFiles.length} events!`);
+    bot.log("log", `Loading ${eventFiles.length} events!`);
     eventFiles.forEach(file => {
         const eventName = file.split(".")[0];
         const event = require(`./events/${file}`);
@@ -40,4 +39,6 @@ bot.aliases = new discord.Collection();
 
     bot.login(bot.config.token);
 
-}());
+};
+
+init();
