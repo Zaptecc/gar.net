@@ -46,7 +46,7 @@ module.exports = async (bot, message) => {
     if (/\bh+e+i+l+\b/gi.test(message.content)) {
         message.react('🇩🇪')
     }
-    if (message.content.includes('lemayo') || message.content.includes('lmayo') || message.content.includes('lemayonnaise')) {
+    if (message.content.includes('lemayo') || message.content.includes('lmayo') || message.content.includes('lemayonnaise') || message.content.includes('LEMAYO') || message.content.includes('LMAYO') message.content.includes('LEMAYONNAISE')) {
         message.channel.send({ files: [`./resources/lemayo.png`] })
     }
     if (message.content.includes('fingerguns')) {
