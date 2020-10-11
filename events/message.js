@@ -12,6 +12,9 @@ module.exports = async (bot, message) => {
     if (message.content.includes('❤')) {
 		message.react('❤')
     }
+    if (message.content.includes('💛')) {
+		message.react('💛')
+    }
     if (/\bs+h+i+t+\b/gi.test(message.content)) {
 		message.react('💩')
     }
@@ -37,6 +40,15 @@ module.exports = async (bot, message) => {
     if (/\bd+i+c+k+\b/gi.test(message.content)) {
         message.react('🍆')
     }
+    if (/\bt+i+t+s+\b/gi.test(message.content)) {
+        message.react('🍒')
+    }
+    if (/\bt+i+d+d+i+e+s+\b/gi.test(message.content)) {
+        message.react('🍒')
+    }
+    if (/\bt+i+t+t+i+e+s+\b/gi.test(message.content)) {
+        message.react('🍒')
+    }
     if (/\bw+e+t+\b/gi.test(message.content)) {
         message.react('💦')
     }
@@ -46,11 +58,14 @@ module.exports = async (bot, message) => {
     if (/\bh+e+i+l+\b/gi.test(message.content)) {
         message.react('🇩🇪')
     }
-    if (message.content.includes('lemayo') || message.content.includes('lmayo') || message.content.includes('lemayonnaise')) {
+    if (/\bl+e+m+a+y+o+\b/gi.test(message.content) || /\bl+m+a+y+o+\b/gi.test(message.content) || /\bl+e+m+a+y+o+n+n+a+i+s+e+\b/gi.test(message.content)) {
         message.channel.send({ files: [`./resources/lemayo.png`] })
     }
+    if (message.content.includes('ecksdee') || message.content.includes('ecks dee')) {
+        message.channel.send({ files: [`./resources/ecksdee.jpg`] })
+    }
     if (message.content.includes('fingerguns')) {
-        const finger_guns = bot.emojis.get('310267478846603266')
+        const finger_guns = bot.emojis.cache.get('310267478846603266')
         message.react(finger_guns)
         message.channel.send(`${finger_guns}`)
     }
