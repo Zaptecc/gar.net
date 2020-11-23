@@ -13,7 +13,7 @@ exports.run = async(bot, message, args, permLevel) => {
 }
       if (!clean(newNick) || clean(newNick) == ""){
           message.channel.send('Please specify a nickname to set!')
-      } else if(clean(newNick) == "gar.net" || clean(newNick) == "remove" || clean(newNick) == "reset") {
+      } else if(clean(newNick) == "gar.net" || clean(newNick) == "remove" || clean(newNick) == "reset" || clean(newNick) == "clear") {
           message.guild.members.cache.get(bot.user.id).setNickname('gar.net');
           message.channel.send('Nickname successfully removed!')
           console.log('\'' + member.displayName + '\' reset gar.net\'s nickname in server \'' + message.guild + '\'!');
@@ -33,7 +33,7 @@ exports.conf = {
     enabled: true,
     guildOnly: false,
     aliases: [],
-    permLevel: 4
+    permLevel: 3
 };
 
 exports.help = {

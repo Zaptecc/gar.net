@@ -3,7 +3,7 @@
   "prefix": ",",
   "googlekey": "GOOGLE_API_KEY_HERE",
   "cx": "OTHER_GOOGLE_THING_HERE",
-  "version": "beta 1.1.0",
+  "version": "beta 1.1.1",
   "owner": "YOUR_DISCORD_ID_HERE",
   "modRoleName": "Mod",
   "adminRoleName": "Admin"

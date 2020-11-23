@@ -15,6 +15,17 @@ module.exports = async (bot, message) => {
     if (message.content.includes('💛')) {
 		message.react('💛')
     }
+    if (message.content.includes('69')) {
+        message.react('🇳')
+            .then(() => message.react('🇮'))
+            .then(() => message.react('🇨'))
+            .then(() => message.react('🇪'))
+            .then(() => message.react('😉'))
+            .catch(() => console.error('69 reaction didn\'t work'));
+    }
+    if (message.content.includes('NOT THE YADDAS')) {
+		message.channel.send('*sHe oUtTa pOcKeT*')
+    }
     if (/\bs+h+i+t+\b/gi.test(message.content)) {
 		message.react('💩')
     }
