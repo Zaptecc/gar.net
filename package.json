@@ -1,0 +1,37 @@
+{
+  "name": "gar.net",
+  "version": "0.1.0",
+  "description": "A simple Discord bot that started with zero JS knowledge",
+  "main": "bot.js",
+  "scripts": {
+    "test": "/help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zaptecc/gar.net.git"
+  },
+  "keywords": [],
+  "author": "Zaptecc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zaptecc/gar.net/issues"
+  },
+  "homepage": "https://github.com/Zaptecc/gar.net#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.1.0",
+    "@hapi/hapi": "^19.2.0",
+    "@hapi/hoek": "^9.1.0",
+    "bufferutil": "^4.0.1",
+    "discord.js": "^12.3.1",
+    "erlpack": "^0.1.3",
+    "google-search": "0.0.5",
+    "libsodium-wrappers": "^0.7.8",
+    "os": "^0.1.1",
+    "os-utils": "0.0.14",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v17.3.0",
+    "utf-8-validate": "^5.0.2",
+    "ytdl-core": "^2.1.7",
+    "ytdl-core-discord": "^1.2.3",
+    "zlib-sync": "^0.1.7"
+  }
+}
