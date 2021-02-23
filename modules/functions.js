@@ -15,6 +15,7 @@ module.exports = (bot) => {
         } catch (e) {
             console.warn("adminRoleName/ID not found. Skipping Admin (level 3) check");
         }*/
+        if (message.author.id === 353269206827008000) permlvl = 2;
         if (message.author.id === message.guild.owner.id) permlvl = 3;
         if (message.author.id === bot.config.owner) permlvl = 4;
         return permlvl;
