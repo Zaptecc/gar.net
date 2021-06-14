@@ -8,6 +8,7 @@ module.exports = async (bot, message) => {
     }
     
     if (message.author.bot) return;
+    if (message.channel.id === "692635286777102376") return;
 
     if (message.content.includes('❤')) {
 		message.react('❤')
@@ -63,6 +64,9 @@ module.exports = async (bot, message) => {
     }
     if (/\bt+i+t+t+i+e+s+\b/gi.test(message.content)) {
         message.react('🍒')
+    }
+    if (/\bt+h+i+g+h+s+\b/gi.test(message.content)) {
+        message.react('🍐')
     }
     if (/\bw+e+t+\b/gi.test(message.content)) {
         message.react('💦')
